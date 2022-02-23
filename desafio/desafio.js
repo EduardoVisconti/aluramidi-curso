@@ -1,1 +1,1 @@
-document.querySelector('input[type=tel]');
+document.querySelector('input[type=tel]'); /* Buscar elemento através do seletor */
