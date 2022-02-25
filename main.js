@@ -1,14 +1,13 @@
+//"use strict" modo estrito para mostrar "erros". Também podemos usa-lo dentro de alguma função.
+
 function tocaSom (seletorAudio) { //Criando "ID" pro tocaSom.
     const elemento = document.querySelector(seletorAudio);
 
-    if (elemento === null) {
-        console.log('Elemento não encontrado')
+    if (elemento != null && elemento.localName === 'audio') {
+        elemento.play ();
     }
-
-    if (elemento != null) {
-        if (elemento.localName === 'audio'){
-            elemento.play ();
-        }
+    else { //se não
+        console.log('Elemento ou seletor não encontrado/inválido')
     }
 }
 
